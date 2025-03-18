@@ -3,6 +3,7 @@ build/
 result/
 *.exe
 *.prof
+!input/**/*.prof
 *.vtu
 *.log
 *.bat
