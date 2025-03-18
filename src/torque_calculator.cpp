@@ -24,7 +24,7 @@ void TorqueCalculator::calc(std::vector<Particle>& particles, double& n0){
                     Eigen::Vector3d v;
                     Eigen::Affine3d rot;
                     rot = Eigen::AngleAxisd(ne.localangle, Eigen::Vector3d(0, 0, 1));
-                    v = (rot * (pj.initialposition - pi.initialposition)).cross(ne.sheerstrain);//ここの外積、怪しいな.....
+                    v = (rot * (pj.initialposition - pi.initialposition)).cross(ne.sheerstrain);
                     double a = dim * lame2 * l0 * l0 * weight(ne.initialdistance, re);//ここは完全に間違ってた！！←この値が小さすぎる * weight(ne.initialdistance, re) をのぞいた。
                     double b = n0 * ne.initialdistance * ne.initialdistance;
                     tor += (v.z() * a / b);//あっていると思う。
