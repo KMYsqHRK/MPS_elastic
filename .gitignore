@@ -1,0 +1,9 @@
+.vscore/
+build/
+result/
+*.exe
+*.prof
+*.vtu
+*.log
+*.bat
+*.ps1

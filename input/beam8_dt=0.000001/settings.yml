@@ -1,0 +1,36 @@
+# computational conditions
+dim: 2
+particleDistance: 0.025 #単位系になっているか?
+dt: 0.000001
+endTime: 2.0
+outputPeriod: 0.01
+cflCondition: 0.3
+numPhysicalCores: 10
+
+# domain
+domainMin: [-2, -2, 0.0]
+domainMax: [10, 4, 0.0] #編集済み
+
+#ここの変更はいろいろ難しそうだけど、結局必要なのはλとμ
+# physical properties
+elasticdensity: 900 #密度
+elasticratio: 1000000 #ヤング率
+poissonratio: 0.46 # ポアソン比
+
+# gravity
+gravity: [0.0, -9.8, 0.0]
+
+#ここら辺は粒子法である以上は必要なので入れる
+# collision
+collisionDistanceRatio: 0.4
+coefficientOfRestitution: 0.2
+
+#ここら辺ももちろん要る
+# effective radius
+radiusRatioForDivergence: 3.1
+radiusRatioForGradient: 3.1
+radiusRatioForLaplacian: 3.1
+
+# i/o
+# relative path from the directory where this file is located
+profPath: ./input.prof
