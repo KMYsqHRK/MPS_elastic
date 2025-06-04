@@ -1,8 +1,11 @@
 # MPS_elastic
 
+![Demo](img/frame.gif)
+
 This repository is being developed to simulate elastic bodies using the particle method. In the future, we aim to coupled with fluids.<br>
 These codes were created using the following repositories as references.<br>
 [MPS-basic](https://github.com/MPS-Basic/MPS-Basic.git)
+
 
 ## Requirement
 ### Execution
@@ -43,15 +46,15 @@ These codes were created using the following repositories as references.<br>
 #### Linux/Mac
 1. Create output directory if not exist
 	```bash
-	mkdir -p result/dambreak/
+	mkdir -p result/frame/
 	```
 1. Remove old output files if exist
 	```bash
-	rm -rf result/dambreak/*
+	rm -rf result/frame/*
 	```
 1. Run simulation
 	```bash
-	./build/mps --setting input/dambreak/settings.yml --output result/dambreak 2> result/dambreak/error.log | tee result/dambreak/console.log
+	./build/mps --setting input/frame/settings.yml --output result/frame 2> result/frame/error.log | tee result/frame/console.log
 	```
 
 ### Checking Results
